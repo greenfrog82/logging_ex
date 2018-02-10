@@ -20,6 +20,7 @@ class RotatingFileHandlerEx(logging.handlers.RotatingFileHandler):
             gid = grp.getgrnam(self.owner[1]).gr_gid
 
             os.chown(self.baseFilename, uid, gid)
+        if self.chmod:
             os.chmod(self.baseFilename, self.chmod)
 
         return stream

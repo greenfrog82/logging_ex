@@ -1,6 +1,6 @@
 import logging
 import logging.config
-import logging_ex
+import logging_ex.handlers
 
 LOGGING = {
     'version': 1,
